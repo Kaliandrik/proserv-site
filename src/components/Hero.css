@@ -27,14 +27,30 @@
   gap: 20px;
 }
 
-/* Amarelo sólido sem degradê */
-.text-yellow {
-  color: #facc15;
-  font-weight: 850;
-  -webkit-text-fill-color: initial;
-  background: none;
+/* Animações de Entrada (Spawn / Fade-Up) */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+@keyframes heroFadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Efeito Cascata por elemento */
 .hero-title {
   font-size: 2.15rem;
   font-weight: 850;
@@ -42,6 +58,7 @@
   letter-spacing: -0.6px;
   color: #ffffff;
   text-shadow: 0 3px 14px rgba(0, 0, 0, 0.45);
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .hero-desc {
@@ -51,6 +68,8 @@
   max-width: 580px;
   font-weight: 400;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.18s forwards;
 }
 
 .hero-actions {
@@ -58,6 +77,34 @@
   flex-direction: column;
   gap: 12px;
   padding-top: 4px;
+  opacity: 0;
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.32s forwards;
+}
+
+.hero-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+}
+
+.hero-media {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  opacity: 0;
+  animation: heroFadeInScale 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+}
+
+/* Amarelo sólido sem degradê */
+.text-yellow {
+  color: #facc15;
+  font-weight: 850;
+  -webkit-text-fill-color: initial;
+  background: none;
 }
 
 .btn-hero-primary {
@@ -122,14 +169,6 @@
   transform: translateY(0);
 }
 
-.hero-badges {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 .badge-item {
   display: flex;
   align-items: center;
@@ -137,12 +176,6 @@
   font-size: 0.88rem;
   font-weight: 600;
   color: #ede2fe;
-}
-
-.hero-media {
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 .hero-card-wrapper {
