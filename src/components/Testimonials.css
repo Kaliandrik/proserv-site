@@ -111,7 +111,7 @@
   gap: 26px;
 }
 
-/* Card Individual com Suporte a Fundo Ilustrado */
+/* Card Individual */
 .testimonial-card {
   position: relative;
   background: rgba(255, 255, 255, 0.96);
@@ -161,22 +161,24 @@
   z-index: 1;
 }
 
-/* Autor */
+/* Autor com Avatar em Destaque */
 .testimonial-author {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding-top: 18px;
+  gap: 16px;
+  padding-top: 20px;
   border-top: 1px solid #f1f5f9;
 }
 
 .author-avatar-box {
-  width: 50px;
-  height: 50px;
-  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #ede9fe;
+  border: 3px solid #f3e8ff;
   background-color: #f3e8ff;
+  box-shadow: 0 4px 10px rgba(121, 32, 220, 0.12);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -187,20 +189,22 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
+  transform: scale(1.1);
   display: block;
 }
 
 .avatar-fallback::after {
   content: attr(data-initial);
   font-weight: 800;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   color: #7920dc;
 }
 
 .author-meta {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .author-name-row {
@@ -210,18 +214,19 @@
 }
 
 .author-name {
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 1.05rem;
+  font-weight: 850;
   color: #0f172a;
 }
 
 .verified-icon {
   color: #7920dc;
+  flex-shrink: 0;
 }
 
 .author-role {
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 750;
   color: #7920dc;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -249,10 +254,18 @@
   .testimonials-title {
     font-size: 1.95rem;
   }
+
   .testimonials-section {
     padding: 44px 16px 54px;
   }
+
   .testimonial-card {
     padding: 26px 20px 22px;
+  }
+
+  .author-avatar-box {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
   }
 }
