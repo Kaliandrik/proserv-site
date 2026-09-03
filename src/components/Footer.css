@@ -1,0 +1,356 @@
+.footer-section {
+  background-color: #ffffff;
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  border-top: 1px solid #edf2f7;
+}
+
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Faixa de Redes Sociais Superior */
+.footer-social-bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #edf2f7;
+  padding: 20px 0;
+}
+
+.social-bar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.social-label-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-pill {
+  background: #f3e8ff;
+  color: #7920dc;
+  border: 1px solid rgba(121, 32, 220, 0.2);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.social-callout {
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.96rem;
+}
+
+.social-icons-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background: #7920dc;
+  color: #ffffff;
+  border-color: #7920dc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px -3px rgba(121, 32, 220, 0.35);
+}
+
+.social-btn.whatsapp-highlight:hover {
+  background: #22c55e;
+  border-color: #22c55e;
+  box-shadow: 0 6px 14px -3px rgba(34, 197, 94, 0.35);
+}
+
+/* Grade Principal */
+.footer-main {
+  padding: 48px 0 40px;
+  background-color: #ffffff;
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col-title {
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 24px;
+  height: 2px;
+  background: #facc15;
+  border-radius: 2px;
+}
+
+/* Coluna 1: Marca */
+.brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.footer-brand-logo {
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-brand-desc {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.secure-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #334155;
+  width: fit-content;
+}
+
+.secure-tag svg {
+  color: #eab308;
+}
+
+/* Listas de Links */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-list a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-block;
+  padding: 2px 0;
+}
+
+.footer-links-list a:hover {
+  color: #7920dc;
+  transform: translateX(3px);
+}
+
+/* Contatos */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.contact-icon {
+  color: #7920dc;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.contact-list a {
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-list a:hover {
+  color: #7920dc;
+}
+
+/* Faixa Inferior Legal */
+.footer-bottom {
+  background-color: #f8fafc;
+  padding: 22px 0 28px;
+  border-top: 1px solid #edf2f7;
+}
+
+.bottom-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+.legal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.corporate-name {
+  color: #0f172a;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.cnpj-text {
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.copyright-text {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.legal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.legal-nav a,
+.legal-link-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.legal-nav a:hover,
+.legal-link-btn:hover {
+  color: #7920dc;
+}
+
+.legal-nav .divider {
+  color: #cbd5e1;
+}
+
+/* Tablet e Telas Médias */
+@media (min-width: 640px) {
+  .footer-container {
+    padding: 0 24px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .brand-col {
+    grid-column: span 2;
+    align-items: flex-start;
+    text-align: left;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .social-bar-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-main {
+    padding: 60px 0 50px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.4fr 0.9fr 0.9fr 1.3fr;
+    gap: 48px;
+  }
+
+  .brand-col {
+    grid-column: span 1;
+  }
+
+  .footer-brand-logo {
+    max-width: 200px;
+  }
+
+  .bottom-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .legal-info {
+    text-align: left;
+  }
+}
