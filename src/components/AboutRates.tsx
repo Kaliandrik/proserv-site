@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutRates.css';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
-const WHATSAPP_PHONE = '5588999780443';
+const WHATSAPP_PHONE = '5588997124642';
 const ABOUT_WA_MESSAGE = 'Olá! Vim pelo site da Proserv e gostaria de simular com as taxas reduzidas a partir de 1,76%.';
 const WA_LINK = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(ABOUT_WA_MESSAGE)}`;
 

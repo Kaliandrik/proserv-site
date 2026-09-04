@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import { ShieldCheck } from 'lucide-react';
 
-const WHATSAPP_PHONE = '5588999780443';
+const WHATSAPP_PHONE = '5588997124642';
 const NAVBAR_WA_MESSAGE = 'Olá! Vim pelo site da Proserv e gostaria de fazer uma simulação de crédito.';
 const WA_LINK = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(NAVBAR_WA_MESSAGE)}`;
 

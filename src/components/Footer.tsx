@@ -12,7 +12,7 @@ interface FooterProps {
   onOpenPrivacy: () => void;
 }
 
-const WHATSAPP_PHONE = '5588999780443';
+const WHATSAPP_PHONE = '5588997124642';
 
 const createWaLink = (message: string) => {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms, onOpenPrivacy }) =>
             </a>
 
             <a 
-              href={createWaLink('Olá! Gostaria de falar com um consultor da Proserv.')}
+              href={createWaLink('Olá! Gostaria de falar com o suporte da Proserv.')}
               target="_blank" 
               rel="noreferrer" 
               className="social-btn whatsapp-highlight"
@@ -91,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms, onOpenPrivacy }) =>
             </p>
           </div>
 
-          {/* Coluna 2: Serviços com Mensagens Pré-definidas */}
+          {/* Coluna 2: Serviços Atualizados */}
           <div className="footer-col">
             <h4 className="footer-col-title">Serviços</h4>
             <ul className="footer-links-list">
@@ -106,29 +106,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms, onOpenPrivacy }) =>
               </li>
               <li>
                 <a 
-                  href={createWaLink('Olá! Gostaria de antecipar o meu saldo do FGTS.')}
+                  href={createWaLink('Olá! Sou funcionário CLT e gostaria de simular crédito / FGTS.')}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Antecipação do FGTS
+                  Funcionários CLT
                 </a>
               </li>
               <li>
                 <a 
-                  href={createWaLink('Olá! Tenho interesse em receber informações sobre o Auxílio Maternidade.')}
+                  href={createWaLink('Olá! Sou autônomo e gostaria de simular o empréstimo na conta de luz.')}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Auxílio Maternidade
-                </a>
-              </li>
-              <li>
-                <a 
-                  href={createWaLink('Olá! Gostaria de informações sobre consultoria de crédito e CPF/CNPJ.')}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  CPF / CNPJ Blindado
+                  Autônomos (Conta de Luz)
                 </a>
               </li>
             </ul>
@@ -159,7 +150,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms, onOpenPrivacy }) =>
             <ul className="contact-list">
               <li>
                 <MapPin size={18} className="contact-icon" />
-                <span>Rua Madalena Nunes, 579 — Centro, Tianguá - CE</span>
+                <span>Rua Zeca Teles de Menezes, 200 — 4° piso, Shopping Ibiapaba, Tianguá - CE</span>
               </li>
               <li>
                 <MessageCircle size={18} className="contact-icon" />
@@ -168,7 +159,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms, onOpenPrivacy }) =>
                   target="_blank" 
                   rel="noreferrer"
                 >
-                  WhatsApp: (88) 99978-0443
+                  WhatsApp: (88) 99712-4642
                 </a>
               </li>
               <li>

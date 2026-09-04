@@ -1,6 +1,6 @@
 import React from 'react';
 import './Services.css';
-import { Landmark, PiggyBank, Baby, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Landmark, Briefcase, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface ServiceItem {
   id: string;
@@ -21,58 +21,62 @@ const servicesData: ServiceItem[] = [
     badge: 'Mais Procurado',
     isPopular: true,
     title: 'Empréstimo Consignado',
-    description: 'Crédito com débito em folha, taxas reduzidas e liberação rápida para você realizar seus planos sem estresse.',
+    description: 'As menores taxas do mercado com débito automático em folha e aprovação ágil para beneficiários e servidores.',
     benefits: [
       'Aposentados e pensionistas do INSS',
-      'Sem consulta ao SPC ou Serasa',
-      'Prazos estendidos de pagamento',
+      'Servidores Federais, Estaduais e Municipais',
+      'Sem consulta ao SPC ou Serasa'
     ],
     ctaText: 'Simular Consignado',
-    whatsappMessage: 'Olá! Vim pelo site da Proserv e tenho interesse em simular um Empréstimo Consignado.',
+    whatsappMessage: 'Olá! Vim pelo site da Proserv e tenho interesse em simular um Empréstimo Consignado (INSS/Servidor Público).',
   },
   {
-    id: 'fgts',
-    icon: <PiggyBank size={28} />,
-    badge: 'Sem Mensalidade',
-    title: 'Antecipação do FGTS',
-    description: 'Antecipe até 10 anos do seu Saque-Aniversário e receba o valor direto na sua conta sem parcelas mensais.',
+    id: 'clt',
+    icon: <Briefcase size={28} />,
+    badge: 'Carteira Assinada',
+    title: 'Funcionários CLT',
+    description: 'Linhas exclusivas para quem trabalha com carteira assinada liberar crédito sem burocracia desnecessária.',
     benefits: [
-      'Desconto automático no saldo FGTS',
-      'Liberação em poucas horas',
-      'Disponível para quem está negativado',
+      'Empréstimo Consignado com desconto em folha',
+      'Antecipação de FGTS',
+      'Liberação rápida direto na sua conta bancária'
     ],
-    ctaText: 'Antecipar Saque',
-    whatsappMessage: 'Olá! Vim pelo site da Proserv e tenho interesse na Antecipação do meu FGTS.',
+    ctaText: 'Simular para CLT',
+    whatsappMessage: 'Olá! Vim pelo site da Proserv e sou funcionário CLT. Gostaria de simular crédito / FGTS.',
   },
   {
-    id: 'maternidade',
-    icon: <Baby size={28} />,
-    badge: 'Direito Garantido',
-    title: 'Auxílio Maternidade',
-    description: 'Assessoria completa para mães receberem seu benefício de forma rápida, segura e sem burocracia.',
+    id: 'autonomos',
+    icon: <Zap size={28} />,
+    badge: 'Débito em Fatura',
+    title: 'Autônomos',
+    description: 'Linha ágil voltada a profissionais liberais e empreendedores, com parcelamento facilitado cobrado diretamente na sua conta de luz.',
     benefits: [
-      'Válido para crianças de até 5 anos',
-      'Análise documental personalizada',
-      'Acompanhamento do início ao fim',
+      'Empréstimo na conta de luz',
+      'Exige apenas titularidade da conta e documento com foto',
+      'Liberação rápida direto na sua conta bancária'
     ],
-    ctaText: 'Consultar Direito',
-    whatsappMessage: 'Olá! Vim pelo site da Proserv e gostaria de uma consultoria sobre o Auxílio Maternidade.',
+    ctaText: 'Simular na Conta de Luz',
+    whatsappMessage: 'Olá! Vim pelo site da Proserv e sou autônomo. Gostaria de simular o empréstimo com débito na conta de luz.',
   },
 ];
 
-const WHATSAPP_PHONE = '5588999780443';
+const WHATSAPP_PHONE = '5588997124642';
 
 export const Services: React.FC = () => {
   return (
     <section id="servicos" className="services-section">
       <div className="services-container">
         <header className="services-header">
+          <div className="services-pill">
+            <span>Nossas Linhas de Atendimento</span>
+          </div>
+
           <h2 className="services-heading">
-            Soluções financeiras pensadas para a sua{' '}
-            <span className="text-purple-highlight">tranquilidade</span>
+            Soluções financeiras pensadas para a sua tranquilidade
           </h2>
+
           <p className="services-subheading">
-            Sem pegadinhas ou taxas ocultas. Escolha a linha ideal e conte com um atendimento humanizado e transparente.
+            Sem pegadinhas ou taxas ocultas. Escolha a sua categoria e receba uma proposta personalizada com atendimento humanizado.
           </p>
         </header>
 
@@ -82,11 +86,9 @@ export const Services: React.FC = () => {
               key={item.id}
               className={`service-card ${item.isPopular ? 'popular-card' : ''}`}
             >
-              {item.isPopular && <div className="popular-top-stripe" />}
-
               <div className="card-header">
                 <div className="card-icon-box">{item.icon}</div>
-                <span className={`card-badge ${item.isPopular ? 'badge-popular' : ''}`}>
+                <span className={`card-badge ${item.isPopular ? 'badge-yellow' : ''}`}>
                   {item.badge}
                 </span>
               </div>
@@ -108,7 +110,7 @@ export const Services: React.FC = () => {
               </div>
 
               <div className="card-action">
-                <a 
+                <a
                   href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(item.whatsappMessage)}`}
                   target="_blank"
                   rel="noreferrer"
